@@ -1,6 +1,8 @@
 let transactions = [];
 let myChart;
 
+initializeServiceWorker();
+
 fetch("/api/transaction")
   .then(response => {
     return response.json();
@@ -78,6 +80,15 @@ function populateChart() {
   });
 }
 
+function initializeServiceWorker(){
+  if("serviceWorker" in navigator){
+    window.addEventListener("load", function(){
+      navigator.serviceWorker.register("/service-worker.js").then(function(result){
+        console.log("service worker register", result)
+      })
+    })
+  }
+}
 function sendTransaction(isAdding) {
   let nameEl = document.querySelector("#t-name");
   let amountEl = document.querySelector("#t-amount");
