@@ -1,6 +1,7 @@
-var indexDB = window.indexDB;
+var indexDB = window.indexedDB;
 var db
 var request = indexDB.open("Budget",1)
+
 request.onupgradeneeded = (evt)=>{
     let db = evt.target.result
     db.createObjectStore("pending", {
