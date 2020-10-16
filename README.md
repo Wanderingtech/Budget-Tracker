@@ -27,8 +27,8 @@ Giving users a fast and easy way to track their money is important, but allowing
 
 ## Links/Images
 
-![image](public\assets\budget1.png)
-![image](public\assets\budget2.png)
+![image](public/assets/budget1.png)
+![image](public/assets/budget2.png)
 
 [deployed app] https://pacific-ocean-92422.herokuapp.com/
 
