@@ -1,6 +1,6 @@
-var indexDB = window.indexedDB;
-var db
-var request = indexDB.open("Budget",1)
+const indexDB = window.indexedDB;
+let db
+const request = indexDB.open("Budget",1)
 
 request.onupgradeneeded = (evt)=>{
     let db = evt.target.result
@@ -21,8 +21,9 @@ function initializeDB(){
     let tr = db.transaction(["pending"],"readwrite")
     let store = tr.objectStore("pending")
     let getAll = store.getAll()
+
     getAll.onsuccess = function(){
-        if(getAll.result.length >0){
+        if(getAll.result.length > 0){
             fetch("/api/transaction/bulk",{
                 method: "POST",
                 body: JSON.stringify(getAll.result)
