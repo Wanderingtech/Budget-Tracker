@@ -9,6 +9,7 @@ Heather Stolz
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
+* [improvements](#improvements)
 * [Links/Images](#Links/Images)
 * [Questions](#questions)
 
@@ -24,6 +25,10 @@ Please run these commands to install dependancies for this project: npm i
 ## Usage
 
 Giving users a fast and easy way to track their money is important, but allowing them to access that information anytime is even more important. Having offline functionality is paramount to our applications success.
+
+## Improvements
+
+Connect MongoDB to application so I can deploy the app on heroku.
 
 ## Links/Images
 
